@@ -1,0 +1,41 @@
+schema_version: "0.1"
+scenario:
+  id: lp_12_months
+  name: "LP enters Fund I and 12-month operations"
+  start_date: "2026-01-01"
+  end_date: "2026-12-31"
+  random_seed: 42
+initial_events:
+  - event_type: FundClosing
+    simulation_time: "2026-01-02"
+    payload:
+      fund_id: fund_i
+  - event_type: InitialCapitalCall
+    simulation_time: "2026-01-15"
+    payload:
+      fund_id: fund_i
+      lp_id: lp_a
+      amount: 1000000
+branch_triggers:
+  - id: lp_default_branch
+    branch_id: lp_default
+  - id: ic_rejection_branch
+    branch_id: ic_rejection
+  - id: regulatory_delay_branch
+    branch_id: regulatory_delay
+  - id: early_liquidity_branch
+    branch_id: early_liquidity
+  - id: down_round_branch
+    branch_id: down_round
+  - id: bridge_financing_branch
+    branch_id: bridge_financing
+  - id: write_off_branch
+    branch_id: write_off
+  - id: delayed_exit_branch
+    branch_id: delayed_exit
+  - id: partial_exit_branch
+    branch_id: partial_exit
+  - id: regulatory_block_branch
+    branch_id: regulatory_block
+  - id: lp_default_cure_or_waiver_branch
+    branch_id: lp_default_cure_or_waiver

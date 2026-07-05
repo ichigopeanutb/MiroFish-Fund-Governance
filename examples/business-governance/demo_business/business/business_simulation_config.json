@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "engine_type": "business_governance",
+  "simulation_id": "demo_business",
+  "project_id": "demo_project",
+  "graph_id": "demo_graph",
+  "input_paths": {
+    "fund_terms": "fund_terms.yaml",
+    "scenario": "scenario.yaml",
+    "agent_profiles": "agent_profiles.yaml"
+  },
+  "output_paths": {
+    "compiled_world": "compiled_world.json",
+    "event_log": "event_log.jsonl",
+    "ledger": "ledger.jsonl",
+    "decision_records": "decision_records.jsonl",
+    "rule_execution_records": "rule_execution_records.jsonl",
+    "branch_results": "branch_results.json",
+    "state_snapshot": "state_snapshot.json",
+    "report_context": "report_context.json"
+  },
+  "runtime": {
+    "event_queue": "heapq",
+    "max_events": 10000,
+    "snapshot_frequency": "final"
+  },
+  "llm": {
+    "enabled": false,
+    "commit_policy": "propose_only"
+  }
+}

@@ -59,6 +59,7 @@
           :buildProgress="buildProgress"
           :graphData="graphData"
           :systemLogs="systemLogs"
+          :engineType="selectedEngineType"
           @next-step="handleNextStep"
         />
         <!-- Step 2: 环境搭建 -->
@@ -105,6 +106,7 @@ const graphLoading = ref(false)
 const error = ref('')
 const projectData = ref(null)
 const graphData = ref(null)
+const selectedEngineType = ref('oasis_social')
 const currentPhase = ref(-1) // -1: Upload, 0: Ontology, 1: Build, 2: Complete
 const ontologyProgress = ref(null)
 const buildProgress = ref(null)
@@ -202,18 +204,21 @@ const handleNewProject = async () => {
   try {
     loading.value = true
     currentPhase.value = 0
+    selectedEngineType.value = pending.engineType || 'oasis_social'
     ontologyProgress.value = { message: 'Uploading and analyzing docs...' }
     addLog('Starting ontology generation: Uploading files...')
     
     const formData = new FormData()
     pending.files.forEach(f => formData.append('files', f))
     formData.append('simulation_requirement', pending.simulationRequirement)
+    formData.append('engine_type', selectedEngineType.value)
     
     const res = await generateOntology(formData)
     if (res.success) {
       clearPendingUpload()
       currentProjectId.value = res.data.project_id
       projectData.value = res.data
+      selectedEngineType.value = res.data.engine_type || selectedEngineType.value
       
       router.replace({ name: 'Process', params: { projectId: res.data.project_id } })
       ontologyProgress.value = null
@@ -238,6 +243,7 @@ const loadProject = async () => {
     const res = await getProject(currentProjectId.value)
     if (res.success) {
       projectData.value = res.data
+      selectedEngineType.value = res.data.engine_type || 'oasis_social'
       updatePhaseByStatus(res.data.status)
       addLog(`Project loaded. Status: ${res.data.status}`)
       

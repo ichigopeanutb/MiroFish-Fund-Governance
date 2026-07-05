@@ -1,0 +1,23 @@
+schema_version: "0.1"
+agents:
+  - id: agent_gp
+    role: GeneralPartner
+    entity_id: gp
+    represents: gp
+    risk_tolerance: high
+    liquidity_preference: medium
+    governance_sensitivity: medium
+  - id: agent_lp_a
+    role: LimitedPartner
+    entity_id: lp_a
+    represents: lp_a
+    risk_tolerance: medium
+    liquidity_preference: high
+    governance_sensitivity: high
+  - id: agent_ic
+    role: InvestmentCommittee
+    entity_id: ic
+    represents: ic
+    risk_tolerance: medium
+    liquidity_preference: medium
+    governance_sensitivity: high

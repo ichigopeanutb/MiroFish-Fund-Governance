@@ -156,8 +156,11 @@
         </div>
         
         <div class="card-content">
-          <p class="api-note">POST /api/simulation/create</p>
+          <p class="api-note">{{ simulationCreateApiNote }}</p>
           <p class="description">{{ $t('step1.buildCompleteDesc') }}</p>
+          <div class="engine-pill" :class="{ business: engineType === 'business_governance' }">
+            {{ engineType === 'business_governance' ? 'Business Governance Engine' : 'OASIS Social Engine' }}
+          </div>
           <button 
             class="action-btn" 
             :disabled="currentPhase < 2 || creatingSimulation"
@@ -191,6 +194,7 @@ import { computed, ref, watch, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { createSimulation } from '../api/simulation'
+import { createBusinessSimulation } from '../api/businessSimulation'
 
 const router = useRouter()
 const { t } = useI18n()
@@ -201,7 +205,8 @@ const props = defineProps({
   ontologyProgress: Object,
   buildProgress: Object,
   graphData: Object,
-  systemLogs: { type: Array, default: () => [] }
+  systemLogs: { type: Array, default: () => [] },
+  engineType: { type: String, default: 'oasis_social' }
 })
 
 defineEmits(['next-step'])
@@ -209,6 +214,12 @@ defineEmits(['next-step'])
 const selectedOntologyItem = ref(null)
 const logContent = ref(null)
 const creatingSimulation = ref(false)
+
+const simulationCreateApiNote = computed(() => {
+  return props.engineType === 'business_governance'
+    ? 'POST /api/business-simulation/create'
+    : 'POST /api/simulation/create'
+})
 
 // 进入环境搭建 - 创建 simulation 并跳转
 const handleEnterEnvSetup = async () => {
@@ -220,17 +231,22 @@ const handleEnterEnvSetup = async () => {
   creatingSimulation.value = true
   
   try {
-    const res = await createSimulation({
-      project_id: props.projectData.project_id,
-      graph_id: props.projectData.graph_id,
-      enable_twitter: true,
-      enable_reddit: true
-    })
+    const res = props.engineType === 'business_governance'
+      ? await createBusinessSimulation({
+          project_id: props.projectData.project_id,
+          graph_id: props.projectData.graph_id
+        })
+      : await createSimulation({
+          project_id: props.projectData.project_id,
+          graph_id: props.projectData.graph_id,
+          enable_twitter: true,
+          enable_reddit: true
+        })
     
     if (res.success && res.data?.simulation_id) {
-      // 跳转到 simulation 页面
+      // 跳转到对应的 simulation 页面
       router.push({
-        name: 'Simulation',
+        name: props.engineType === 'business_governance' ? 'BusinessSimulation' : 'Simulation',
         params: { simulationId: res.data.simulation_id }
       })
     } else {
@@ -362,6 +378,27 @@ watch(() => props.systemLogs.length, () => {
   color: #666;
   line-height: 1.5;
   margin-bottom: 16px;
+}
+
+.engine-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  margin-bottom: 12px;
+  border: 1px solid #E0E0E0;
+  background: #FAFAFA;
+  color: #555;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.engine-pill.business {
+  border-color: #111;
+  background: #111;
+  color: #FFF;
 }
 
 /* Step 01 Tags */

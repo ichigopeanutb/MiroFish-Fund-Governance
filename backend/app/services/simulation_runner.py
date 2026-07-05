@@ -249,10 +249,13 @@ class SimulationRunner:
         try:
             with open(state_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
+            runner_status = data.get("runner_status", "idle")
+            if runner_status == "ready":
+                runner_status = "idle"
             
             state = SimulationRunState(
                 simulation_id=simulation_id,
-                runner_status=RunnerStatus(data.get("runner_status", "idle")),
+                runner_status=RunnerStatus(runner_status),
                 current_round=data.get("current_round", 0),
                 total_rounds=data.get("total_rounds", 0),
                 simulated_hours=data.get("simulated_hours", 0),
@@ -1765,4 +1768,3 @@ class SimulationRunner:
             results = results[:limit]
         
         return results
-

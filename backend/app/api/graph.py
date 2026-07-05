@@ -154,6 +154,7 @@ def generate_ontology():
         simulation_requirement = request.form.get('simulation_requirement', '')
         project_name = request.form.get('project_name', 'Unnamed Project')
         additional_context = request.form.get('additional_context', '')
+        engine_type = request.form.get('engine_type', 'oasis_social')
         
         logger.debug(f"项目名称: {project_name}")
         logger.debug(f"模拟需求: {simulation_requirement[:100]}...")
@@ -175,6 +176,7 @@ def generate_ontology():
         # 创建项目
         project = ProjectManager.create_project(name=project_name)
         project.simulation_requirement = simulation_requirement
+        project.engine_type = engine_type if engine_type in {"oasis_social", "business_governance"} else "oasis_social"
         logger.info(f"创建项目: {project.project_id}")
         
         # 保存文件并提取文本
@@ -243,7 +245,8 @@ def generate_ontology():
                 "ontology": project.ontology,
                 "analysis_summary": project.analysis_summary,
                 "files": project.files,
-                "total_text_length": project.total_text_length
+                "total_text_length": project.total_text_length,
+                "engine_type": project.engine_type
             }
         })
         

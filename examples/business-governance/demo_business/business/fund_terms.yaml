@@ -1,0 +1,73 @@
+schema_version: "0.1"
+fund:
+  id: fund_i
+  name: "Fund I"
+  currency: USD
+  vintage_year: 2026
+  term_months: 120
+  investment_period_months: 60
+parties:
+  gps:
+    - id: gp
+      name: "GP"
+  lps:
+    - id: lp_a
+      name: "LP-A"
+      commitment: 10000000
+  spvs:
+    - id: spv_a
+      name: "SPV-A"
+  portfolio_companies:
+    - id: portco_a
+      name: "PortfolioCo-A"
+contracts:
+  - id: lpa_fund_i
+    type: LPA
+    effective_date: "2026-01-01"
+    parties: [fund_i, gp, lp_a]
+    clauses:
+      - id: clause_capital_call_notice
+        type: capital_call_notice
+        parameters:
+          notice_days: 10
+      - id: clause_voting_threshold
+        type: voting_threshold
+        parameters:
+          matter: investment_approval
+          threshold_percent: 66.67
+      - id: clause_management_fee
+        type: management_fee
+        parameters:
+          annual_rate: 0.02
+          basis: committed_capital
+          period_months: 3
+      - id: clause_default_remedies
+        type: default_remedies
+        parameters:
+          default_interest_annual_rate: 0.12
+          default_interest_days: 30
+          cure_period_days: 15
+          suspend_voting_rights: true
+          block_new_deployments: true
+      - id: clause_reserve_account
+        type: reserve_account
+        parameters:
+          minimum_cash: 250000
+          rate_of_called_capital: 0.05
+          review_before_distribution: true
+      - id: clause_waterfall
+        type: waterfall_rule
+        parameters:
+          return_of_capital: true
+          preferred_return_rate: 0.08
+          preferred_return_months: 12
+          lp_profit_split: 0.8
+          gp_carry: 0.2
+      - id: clause_audit_review
+        type: audit_review
+        parameters:
+          materiality_threshold: 100000
+          required_checks:
+            - ledger_balanced
+            - reserve_account_reviewed
+            - waterfall_rule_applied

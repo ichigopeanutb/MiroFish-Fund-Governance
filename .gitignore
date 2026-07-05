@@ -52,6 +52,9 @@ mytest/
 # 日志文件
 backend/logs/
 *.log
+.mirofish_runtime/
+private/
+frontend/public/results/
 
 # 上传文件
 backend/uploads/

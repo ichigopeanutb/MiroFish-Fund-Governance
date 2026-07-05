@@ -195,6 +195,7 @@ import { ref, computed, onMounted, onUnmounted, onActivated, watch, nextTick } f
 import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { getSimulationHistory } from '../api/simulation'
+import { getBusinessSimulationHistory } from '../api/businessSimulation'
 
 const router = useRouter()
 const route = useRoute()
@@ -347,8 +348,8 @@ const getSimulationTitle = (requirement) => {
 // 格式化 simulation_id 显示（截取前6位）
 const formatSimulationId = (simulationId) => {
   if (!simulationId) return 'SIM_UNKNOWN'
-  const prefix = simulationId.replace('sim_', '').slice(0, 6)
-  return `SIM_${prefix.toUpperCase()}`
+  const prefix = simulationId.replace(/^sim_/, '').replace(/^bus_/, '').slice(0, 6)
+  return simulationId.startsWith('bus_') ? `BUS_${prefix.toUpperCase()}` : `SIM_${prefix.toUpperCase()}`
 }
 
 // 格式化轮数显示（当前轮/总轮数）
@@ -418,7 +419,7 @@ const goToProject = () => {
 const goToSimulation = () => {
   if (selectedProject.value?.simulation_id) {
     router.push({
-      name: 'Simulation',
+      name: selectedProject.value.engine_type === 'business_governance' ? 'BusinessSimulation' : 'Simulation',
       params: { simulationId: selectedProject.value.simulation_id }
     })
     closeModal()
@@ -440,10 +441,22 @@ const goToReport = () => {
 const loadHistory = async () => {
   try {
     loading.value = true
-    const response = await getSimulationHistory(20)
-    if (response.success) {
-      projects.value = response.data || []
-    }
+    const [socialResponse, businessResponse] = await Promise.all([
+      getSimulationHistory(20).catch(() => ({ success: false, data: [] })),
+      getBusinessSimulationHistory(20).catch(() => ({ success: false, data: [] }))
+    ])
+    const social = (socialResponse.success ? socialResponse.data : []).map((item) => ({
+      ...item,
+      engine_type: item.engine_type || 'oasis_social'
+    }))
+    const business = businessResponse.success ? businessResponse.data : []
+    projects.value = [...social, ...business]
+      .sort((a, b) => {
+        const aTime = new Date(a.updated_at || a.created_at || 0).getTime()
+        const bTime = new Date(b.updated_at || b.created_at || 0).getTime()
+        return bTime - aTime
+      })
+      .slice(0, 20)
   } catch (error) {
     console.error('加载历史项目失败:', error)
     projects.value = []

@@ -46,6 +46,7 @@ class Project:
     
     # 配置
     simulation_requirement: Optional[str] = None
+    engine_type: str = "oasis_social"
     chunk_size: int = 500
     chunk_overlap: int = 50
     
@@ -67,6 +68,7 @@ class Project:
             "graph_id": self.graph_id,
             "graph_build_task_id": self.graph_build_task_id,
             "simulation_requirement": self.simulation_requirement,
+            "engine_type": self.engine_type,
             "chunk_size": self.chunk_size,
             "chunk_overlap": self.chunk_overlap,
             "error": self.error
@@ -92,6 +94,7 @@ class Project:
             graph_id=data.get('graph_id'),
             graph_build_task_id=data.get('graph_build_task_id'),
             simulation_requirement=data.get('simulation_requirement'),
+            engine_type=data.get('engine_type', 'oasis_social'),
             chunk_size=data.get('chunk_size', 500),
             chunk_overlap=data.get('chunk_overlap', 50),
             error=data.get('error')
@@ -302,4 +305,3 @@ class ProjectManager:
             for f in os.listdir(files_dir) 
             if os.path.isfile(os.path.join(files_dir, f))
         ]
-

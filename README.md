@@ -91,6 +91,37 @@ Click the image to watch MiroFish's deep prediction of the lost ending based on 
 4. **Report Generation**: ReportAgent with rich toolset for deep interaction with post-simulation environment
 5. **Deep Interaction**: Chat with any agent in the simulated world & Interact with ReportAgent
 
+## MiroFish Fund Governance Edition / Public Alpha
+
+This checkout includes a local fund-governance simulation edition based on the
+MiroFish architecture. It should be treated as a separate Fund Governance
+Edition for private beta packaging, not as the original MiroFish / Miracle
+mainline. The module is designed as a MiroFish-native complement or replacement
+slot for OASIS-style simulation when the target world is LP capital, IC / LPAC
+governance, portfolio scenarios, waterfall, audit, and meeting-pack generation.
+
+Quick verification:
+
+```bash
+npm run setup:all
+npm run business:smoke
+```
+
+Public alpha documentation:
+
+- [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
+- [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
+- [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)
+- [Demo Seed](./examples/business-governance/README.md)
+
+The alpha keeps extracted financial hints and fund terms proposal-only until
+explicitly committed. Governance packets and meeting packs package evidence but
+do not approve, waive, rerun, or mutate ledger state.
+
+For invitation-only trials, keep the GitHub repo private and issue access codes
+outside git. The owner console is available at `/admin/access-codes` when
+`BUSINESS_DEMO_OWNER_CODE` is set.
+
 ## 🚀 Quick Start
 
 ### Option 1: Source Code Deployment (Recommended)

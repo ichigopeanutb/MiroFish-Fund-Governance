@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import Process from '../views/MainView.vue'
 import SimulationView from '../views/SimulationView.vue'
 import SimulationRunView from '../views/SimulationRunView.vue'
+import BusinessSimulationView from '../views/BusinessSimulationView.vue'
+import BusinessAccessAdminView from '../views/BusinessAccessAdminView.vue'
 import ReportView from '../views/ReportView.vue'
 import InteractionView from '../views/InteractionView.vue'
 
@@ -29,6 +31,17 @@ const routes = [
     name: 'SimulationRun',
     component: SimulationRunView,
     props: true
+  },
+  {
+    path: '/business-simulation/:simulationId',
+    name: 'BusinessSimulation',
+    component: BusinessSimulationView,
+    props: true
+  },
+  {
+    path: '/admin/access-codes',
+    name: 'BusinessAccessAdmin',
+    component: BusinessAccessAdminView
   },
   {
     path: '/report/:reportId',

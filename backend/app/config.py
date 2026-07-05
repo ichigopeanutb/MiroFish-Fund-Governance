@@ -6,9 +6,11 @@
 import os
 from dotenv import load_dotenv
 
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
+
 # 加载项目根目录的 .env 文件
 # 路径: MiroFish/.env (相对于 backend/app/config.py)
-project_root_env = os.path.join(os.path.dirname(__file__), '../../.env')
+project_root_env = os.path.join(PROJECT_ROOT, '.env')
 
 if os.path.exists(project_root_env):
     load_dotenv(project_root_env, override=True)
@@ -62,6 +64,14 @@ class Config:
     REPORT_AGENT_MAX_TOOL_CALLS = int(os.environ.get('REPORT_AGENT_MAX_TOOL_CALLS', '5'))
     REPORT_AGENT_MAX_REFLECTION_ROUNDS = int(os.environ.get('REPORT_AGENT_MAX_REFLECTION_ROUNDS', '2'))
     REPORT_AGENT_TEMPERATURE = float(os.environ.get('REPORT_AGENT_TEMPERATURE', '0.5'))
+
+    # Business governance private beta access gate
+    BUSINESS_DEMO_ACCESS_CODE = os.environ.get('BUSINESS_DEMO_ACCESS_CODE', '')
+    BUSINESS_DEMO_OWNER_CODE = os.environ.get('BUSINESS_DEMO_OWNER_CODE', '')
+    BUSINESS_DEMO_ACCESS_REGISTRY_PATH = os.environ.get(
+        'BUSINESS_DEMO_ACCESS_REGISTRY_PATH',
+        os.path.join(PROJECT_ROOT, 'private', 'business-demo-access-codes.json'),
+    )
     
     @classmethod
     def validate(cls) -> list[str]:
@@ -72,4 +82,3 @@ class Config:
         if not cls.ZEP_API_KEY:
             errors.append("ZEP_API_KEY 未配置")
         return errors
-

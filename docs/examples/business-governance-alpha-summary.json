@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1",
+  "status": "passed",
+  "simulation_id": "demo_business",
+  "runtime_simulation_dir": "backend/uploads/simulations/demo_business",
+  "events": 18,
+  "ledger_balanced": true,
+  "decision_status": "action_required",
+  "review_status": "pending_review",
+  "meeting_pack_type": "lpac_ic_meeting_pack",
+  "lp_readiness_status": "ready_for_lp_discussion",
+  "scenario_expansion": {
+    "branch_count": 12,
+    "coverage": [
+      "down_round",
+      "bridge_financing",
+      "write_off",
+      "delayed_exit",
+      "partial_exit",
+      "regulatory_block",
+      "lp_default_cure_or_waiver"
+    ],
+    "generation_policy": "branch_comparison_only_does_not_mutate_base_ledger",
+    "milestone": "portfolio_scenario_expansion_alpha",
+    "schema_version": "0.1"
+  },
+  "highest_risk_branch": {
+    "audit_flags_count": 1,
+    "branch_id": "lp_default",
+    "primary_action": "Issue default notice.",
+    "risk_level": "critical",
+    "risk_score": 90
+  },
+  "evidence_bindings_count": 62,
+  "meeting_pack_files": {
+    "docx": {
+      "bytes": 4256,
+      "path": "backend/uploads/simulations/demo_business/business/meeting_pack.docx"
+    },
+    "json": {
+      "bytes": 29004,
+      "path": "backend/uploads/simulations/demo_business/business/meeting_pack.json"
+    },
+    "markdown": {
+      "bytes": 10917,
+      "path": "backend/uploads/simulations/demo_business/business/meeting_pack.md"
+    },
+    "pdf": {
+      "bytes": 13920,
+      "path": "backend/uploads/simulations/demo_business/business/meeting_pack.pdf"
+    }
+  },
+  "delivery_file_check": {
+    "docx_bytes": 4256,
+    "pdf_bytes": 13920
+  },
+  "report_bytes": 12425
+}

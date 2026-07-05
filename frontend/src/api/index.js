@@ -14,6 +14,14 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     config.headers['Accept-Language'] = i18n.global.locale.value
+    const businessDemoAccessCode = sessionStorage.getItem('mirofish_business_demo_access_code')
+    if (businessDemoAccessCode && config.url?.includes('/api/business-simulation')) {
+      config.headers['X-Business-Demo-Access'] = businessDemoAccessCode
+    }
+    const businessDemoOwnerCode = sessionStorage.getItem('mirofish_business_demo_owner_code')
+    if (businessDemoOwnerCode && config.url?.includes('/api/business-simulation/access/admin/')) {
+      config.headers['X-Business-Demo-Owner'] = businessDemoOwnerCode
+    }
     return config
   },
   error => {

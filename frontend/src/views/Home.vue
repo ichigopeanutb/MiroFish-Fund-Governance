@@ -8,6 +8,9 @@
         <a href="https://github.com/666ghj/MiroFish" target="_blank" class="github-link">
           {{ $t('nav.visitGithub') }} <span class="arrow">↗</span>
         </a>
+        <button class="business-demo-link" @click="router.push({ name: 'BusinessSimulation', params: { simulationId: 'demo_business' } })">
+          Business Demo
+        </button>
       </div>
     </nav>
 
@@ -172,6 +175,35 @@
               <span>{{ $t('home.inputParams') }}</span>
             </div>
 
+            <div class="console-section">
+              <div class="console-header">
+                <span class="console-label">SIMULATION ENGINE</span>
+                <span class="console-meta">{{ formData.engineType === 'business_governance' ? 'FUND OPS' : 'SOCIAL WORLD' }}</span>
+              </div>
+              <div class="engine-selector" role="group" aria-label="Simulation engine">
+                <button
+                  type="button"
+                  class="engine-option"
+                  :class="{ active: formData.engineType === 'oasis_social' }"
+                  :disabled="loading"
+                  @click="formData.engineType = 'oasis_social'"
+                >
+                  <span class="engine-title">Social / OASIS</span>
+                  <span class="engine-desc">Agents, posts, platforms</span>
+                </button>
+                <button
+                  type="button"
+                  class="engine-option"
+                  :class="{ active: formData.engineType === 'business_governance' }"
+                  :disabled="loading"
+                  @click="formData.engineType = 'business_governance'"
+                >
+                  <span class="engine-title">Business / Fund Governance</span>
+                  <span class="engine-desc">LPs, IC, calls, ledger</span>
+                </button>
+              </div>
+            </div>
+
             <!-- 输入区域 -->
             <div class="console-section">
               <div class="console-header">
@@ -221,7 +253,8 @@ const router = useRouter()
 
 // 表单数据
 const formData = ref({
-  simulationRequirement: ''
+  simulationRequirement: '',
+  engineType: 'oasis_social'
 })
 
 // 文件列表
@@ -300,7 +333,7 @@ const startSimulation = () => {
   
   // 存储待上传的数据
   import('../store/pendingUpload.js').then(({ setPendingUpload }) => {
-    setPendingUpload(files.value, formData.value.simulationRequirement)
+    setPendingUpload(files.value, formData.value.simulationRequirement, formData.value.engineType)
     
     // 立即跳转到Process页面（使用特殊标识表示新建项目）
     router.push({
@@ -374,6 +407,22 @@ const startSimulation = () => {
 
 .github-link:hover {
   opacity: 0.8;
+}
+
+.business-demo-link {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: var(--white);
+  height: 32px;
+  padding: 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.business-demo-link:hover {
+  background: var(--white);
+  color: var(--black);
 }
 
 .arrow {
@@ -795,6 +844,59 @@ const startSimulation = () => {
   letter-spacing: 1px;
 }
 
+.engine-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.engine-option {
+  border: 1px solid #DDD;
+  background: #FAFAFA;
+  color: var(--black);
+  min-height: 76px;
+  padding: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.engine-option:hover:not(:disabled) {
+  border-color: #999;
+  background: var(--white);
+}
+
+.engine-option.active {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--white);
+}
+
+.engine-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.engine-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.engine-desc {
+  font-size: 0.76rem;
+  color: #777;
+}
+
+.engine-option.active .engine-desc {
+  color: #DDD;
+}
+
 .input-wrapper {
   position: relative;
   border: 1px solid #DDD;
@@ -892,6 +994,10 @@ const startSimulation = () => {
   .hero-logo {
     max-width: 200px;
     margin-bottom: 20px;
+  }
+
+  .engine-selector {
+    grid-template-columns: 1fr;
   }
 }
 </style>
