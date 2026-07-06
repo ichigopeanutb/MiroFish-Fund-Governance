@@ -26,6 +26,17 @@ Public alpha. The module is ready for local demo, GitHub review, and controlled
 external testing. It is not production fund administration software, and it is
 not legal, tax, accounting, or investment advice.
 
+## LP-Facing Trial Materials
+
+Use the LP-facing material pack when inviting reviewers or running private-beta
+walkthroughs:
+
+- [LP-Facing Material Pack](./lp-facing/README.md)
+- [One-Page Overview](./lp-facing/one-page-overview.md)
+- [Demo Meeting Script](./lp-facing/demo-meeting-script.md)
+- [Trial Feedback Form](./lp-facing/trial-feedback-form.md)
+- [Outreach Email Templates](./lp-facing/outreach-email-templates.md)
+
 ## What It Simulates
 
 The demo seed models a synthetic fund lifecycle:

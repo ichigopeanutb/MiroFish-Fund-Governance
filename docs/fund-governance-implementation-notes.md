@@ -88,3 +88,25 @@ MiroFish / Miracle mainline.
 - Do not hide the upstream MiroFish architecture relationship.
 - Do not distribute private beta access by committing real codes.
 - Do not add real LP / fund data to make the demo feel more realistic.
+
+## Roadmap Fit Check - LP-Facing Material Pack Alpha
+
+Status: completed
+
+After the MVP and private GitHub packaging were complete, the next bottleneck
+became adoption: LPs, fund managers, IC / LPAC reviewers, and technical trial
+users need different entry points into the beta. This milestone adds a
+controlled LP-facing material pack so private-beta conversations can produce
+actionable product feedback instead of broad reactions.
+
+## LP-Facing Material Decisions
+
+- Add `docs/lp-facing/` as the reviewer-facing material pack.
+- Keep the materials synthetic-demo only.
+- Position the product as a fund-governance rehearsal layer, not a performance
+  forecast, investor portal, legal advisor, tax advisor, or accounting system.
+- Provide separate material for first contact, demo walkthrough, feedback
+  capture, and outreach by reviewer type.
+- Use the feedback form to decide the next build milestone, especially around LP
+  capital readiness, fund terms, waterfall realism, governance review, evidence
+  binding, meeting-pack usefulness, and hosted/private beta distribution.

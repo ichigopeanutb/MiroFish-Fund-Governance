@@ -48,6 +48,7 @@ http://127.0.0.1:5174/admin/access-codes
 
 Core docs:
 
+- [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
 - [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
 - [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)
