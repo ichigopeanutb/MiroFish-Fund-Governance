@@ -1,9 +1,24 @@
 # MiroFish Business Governance Public Alpha
 
-This module adds a MiroFish-native business / fund-governance simulation engine.
+This document describes the private-beta Fund Governance Edition. This edition
+is based on the MiroFish architecture, but it should be treated as a separate
+repo / product line from the original MiroFish / Miracle mainline.
+
+The module adds a MiroFish-native business / fund-governance simulation engine.
 It can complement or replace the OASIS social-simulation slot for workflows
 where the world being simulated is a fund operating process rather than a social
 media population.
+
+## Repository Identity
+
+- Repo role: `MiroFish Fund Governance Edition`.
+- Intended distribution: private GitHub repo / invitation-only beta.
+- Upstream relationship: built on MiroFish architecture, not a replacement for
+  the original upstream product identity.
+- Audience: project owner, selected fund managers, LP-facing reviewers,
+  IC / LPAC workflow reviewers, and technical private-beta testers.
+- Boundary: no real LP confidential data, fund documents, legal advice,
+  accounting records, or real access codes should be committed.
 
 ## Status
 

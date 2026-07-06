@@ -5,7 +5,7 @@ It is a working implementation log, not a fund ledger and not an approval record
 
 ## Roadmap Fit Check - Private Beta Access Management Alpha
 
-Status: in progress
+Status: completed
 
 This milestone is still aligned with the Fund Governance Edition roadmap because
 the user is preparing LP / fund-manager contact and needs controlled trial access
@@ -60,3 +60,31 @@ mainline.
 - The frontend demo gate verifies codes with the backend.
 - The owner console route is available at `/admin/access-codes`.
 - `.env.example` documents the owner code and registry path without real values.
+
+## Roadmap Fit Check - GitHub Separation / Repository Identity Alpha
+
+Status: completed
+
+After the Fund Governance Edition became usable for private beta trials, the
+next bottleneck was not another simulation feature. The bottleneck was product
+identity: external testers should not confuse this repo with the original
+MiroFish / Miracle mainline.
+
+## Repository Separation Decisions
+
+- The private beta was pushed to a separate private GitHub repository:
+  `ichigopeanutb/MiroFish-Fund-Governance`.
+- The original `ichigopeanutb/MiroFish` `main` branch was not used as the
+  distribution target for this edition.
+- The local branch used for the first private-beta push was
+  `fund-governance-edition-alpha`.
+- The first pushed commit was `b1d3941 Add MiroFish Fund Governance Edition alpha`.
+- The new repo README must identify the repo as `MiroFish Fund Governance
+  Edition` in the first viewport before preserving upstream MiroFish context.
+
+## Repository Identity Non-Goals
+
+- Do not present this repo as the canonical upstream MiroFish product.
+- Do not hide the upstream MiroFish architecture relationship.
+- Do not distribute private beta access by committing real codes.
+- Do not add real LP / fund data to make the demo feel more realistic.

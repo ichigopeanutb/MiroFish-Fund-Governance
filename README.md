@@ -1,3 +1,66 @@
+# MiroFish Fund Governance Edition
+
+Private beta repository for the fund-governance simulation edition.
+
+This repository is **not** the original MiroFish / Miracle mainline. It is a
+separate Fund Governance Edition built on top of the MiroFish architecture for
+LP contact, fund terms, capital calls, IC / LPAC governance, waterfall,
+portfolio scenarios, evidence trails, and meeting-pack preparation.
+
+## What This Repo Is
+
+- A private beta edition for fund-governance simulation workflows.
+- A MiroFish-native replacement / complement for the OASIS simulation slot when
+  the simulated world is a fund operating process instead of a social-media
+  population.
+- A controlled trial repo intended for invited testers, fund managers, LP-facing
+  discussions, and internal product validation.
+
+## What This Repo Is Not
+
+- It is not the canonical upstream MiroFish / Miracle product line.
+- It is not production fund administration software.
+- It is not legal, tax, accounting, or investment advice.
+- It does not contain real access codes, LP data, fund documents, or investor
+  confidential information.
+- The access-code gate is for private beta control; it is not a substitute for
+  production authentication on a public internet deployment.
+
+## Current Private Beta Entry Points
+
+```bash
+npm run setup:all
+npm run business:smoke
+npm run dev:stable start
+```
+
+Local demo:
+
+```text
+http://127.0.0.1:5174/business-simulation/demo_business
+```
+
+Owner access-code console:
+
+```text
+http://127.0.0.1:5174/admin/access-codes
+```
+
+Core docs:
+
+- [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
+- [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
+- [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)
+- [Trial Guide DOCX](./docs/MiroFish_Fund_Governance_Trial_Guide.docx)
+
+## Upstream Context
+
+This edition preserves the original MiroFish architecture and much of the
+upstream README below for context, but the product boundary for this repo is the
+Fund Governance Edition described above.
+
+---
+
 <div align="center">
 
 <img src="./static/image/MiroFish_logo_compressed.jpeg" alt="MiroFish Logo" width="75%"/>
