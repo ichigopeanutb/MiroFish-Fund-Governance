@@ -50,6 +50,7 @@ Core docs:
 
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [First Batch Private Beta Operations](./docs/lp-facing/first-batch/README.md)
+- [Nontechnical Fund Manager Reviewer Pack](./docs/lp-facing/nontechnical-fund-manager-reviewer-pack.md)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
 - [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
 - [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)
@@ -185,6 +186,7 @@ Public alpha documentation:
 
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [First Batch Private Beta Operations](./docs/lp-facing/first-batch/README.md)
+- [Nontechnical Fund Manager Reviewer Pack](./docs/lp-facing/nontechnical-fund-manager-reviewer-pack.md)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
 - [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
 - [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)

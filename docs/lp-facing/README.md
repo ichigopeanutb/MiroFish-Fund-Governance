@@ -11,6 +11,8 @@ advice, investment advice, or a representation of any real fund performance.
 ## Pack Contents
 
 - [First Batch Private Beta Operations](./first-batch/README.md)
+- [Nontechnical Fund Manager Reviewer Pack](./nontechnical-fund-manager-reviewer-pack.md)
+- [Sample Completed Report](./sample-completed-report.md)
 - [One-Page Overview](./one-page-overview.md)
 - [Demo Meeting Script](./demo-meeting-script.md)
 - [Trial Feedback Form](./trial-feedback-form.md)

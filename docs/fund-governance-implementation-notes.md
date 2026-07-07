@@ -141,3 +141,23 @@ fundraising readiness, strategy preparation, and reviewer friction.
 - Use first-batch feedback to choose the next milestone from LP / Fundraise
   Workspace, Hosted Demo / Access Flow, Meeting Pack Export, Editable Terms /
   Scenario Workspace, or Multi-Round Lifecycle Simulation.
+
+## Roadmap Fit Check - Nontechnical Reviewer Visual Packet Alpha
+
+Status: completed
+
+After the first-batch operations pack, the next adoption gap was reviewer
+comprehension. A nontechnical fund manager or senior LP-facing reviewer should
+not need to infer the product from GitHub docs alone. They need to see a demo
+screen, a sample completed report, and a small number of focused feedback
+questions.
+
+## Nontechnical Reviewer Packet Decisions
+
+- Add a demo page screenshot under `docs/lp-facing/assets/`.
+- Add a synthetic sample completed report under `docs/lp-facing/`.
+- Add a nontechnical fund-manager reviewer pack that links the screenshot,
+  sample report, and three feedback questions.
+- Generate a DOCX packet that can be sent directly to nontechnical reviewers.
+- Keep all screenshots and reports synthetic; do not add real LP data, real fund
+  documents, investor identifiers, access codes, or confidential notes.

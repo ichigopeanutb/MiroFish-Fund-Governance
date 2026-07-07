@@ -5,6 +5,10 @@ Use this checklist before sending materials to first-batch reviewers.
 ## Send Before The Meeting
 
 - One-page overview.
+- Demo page screenshot.
+- Sample completed report.
+- Nontechnical fund manager reviewer pack, when the reviewer does not use
+  GitHub.
 - Reviewer-specific short message.
 - Synthetic screenshots or sample report, if useful.
 - Feedback form link or document.
@@ -27,7 +31,9 @@ Use this checklist before sending materials to first-batch reviewers.
 Send:
 
 - One-page overview.
-- Short screenshot or report sample.
+- Demo page screenshot.
+- Sample completed report.
+- Nontechnical fund manager reviewer pack.
 - Three focused questions.
 
 Ask:
