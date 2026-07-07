@@ -1,0 +1,5 @@
+reviewer_id,reviewer_type,relationship_source,technical_level,invite_status,material_sent_at,demo_mode,demo_scheduled_at,demo_completed_at,feedback_received_at,primary_value_signal,top_missing_feature,follow_up_needed,next_action,notes_no_confidential_data
+R-001,LP allocator,introduction,nontechnical,not_sent,,screenshots_only,,,,,,no,prepare_intro_message,"sample row only; keep real names and emails in private tracker"
+R-002,fund_manager,direct_relationship,semi_technical,not_sent,,local_walkthrough,,,,,,no,prepare_intro_message,"sample row only; do not paste confidential notes here"
+R-003,IC_LPAC,advisor_intro,nontechnical,not_sent,,report_pack,,,,,,no,prepare_intro_message,"sample row only; synthetic demo only"
+R-004,technical_operator,known_builder,technical,not_sent,,private_repo,,,,,,no,prepare_repo_invite,"sample row only; real access codes stay outside git"

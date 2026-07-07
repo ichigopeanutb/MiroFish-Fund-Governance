@@ -110,3 +110,34 @@ actionable product feedback instead of broad reactions.
 - Use the feedback form to decide the next build milestone, especially around LP
   capital readiness, fund terms, waterfall realism, governance review, evidence
   binding, meeting-pack usefulness, and hosted/private beta distribution.
+
+## Roadmap Fit Check - First Batch Private Beta Operations Alpha
+
+Status: completed
+
+This milestone is aligned with the current roadmap because the user is preparing
+LP contact and needs a controlled first reviewer batch before opening the beta
+more broadly. The work prioritizes LP-facing clarity, capital-readiness
+feedback, and reviewer operations over deeper simulation complexity.
+
+This also reinforces the operating rule that every next milestone should start
+with a roadmap fit check. The roadmap should not be followed mechanically; it
+should be re-evaluated against current evidence, especially LP conversations,
+fundraising readiness, strategy preparation, and reviewer friction.
+
+## First Batch Decisions
+
+- Add `docs/lp-facing/first-batch/` as the operating pack for the first
+  controlled private beta cohort.
+- Target 5 to 10 reviewers instead of broad public access.
+- Include LP / capital allocator, fund manager / GP, IC / LPAC, operations /
+  finance, technical operator, and senior nontechnical advisor perspectives.
+- Keep real reviewer names, emails, relationship notes, access codes, and
+  confidential feedback outside git.
+- Use `private/` for filled trackers and synthesis files that contain real
+  relationship context.
+- Treat nontechnical reviewers differently from technical repo testers: send
+  result materials and focused questions, not setup instructions.
+- Use first-batch feedback to choose the next milestone from LP / Fundraise
+  Workspace, Hosted Demo / Access Flow, Meeting Pack Export, Editable Terms /
+  Scenario Workspace, or Multi-Round Lifecycle Simulation.

@@ -10,6 +10,7 @@ advice, investment advice, or a representation of any real fund performance.
 
 ## Pack Contents
 
+- [First Batch Private Beta Operations](./first-batch/README.md)
 - [One-Page Overview](./one-page-overview.md)
 - [Demo Meeting Script](./demo-meeting-script.md)
 - [Trial Feedback Form](./trial-feedback-form.md)
@@ -17,10 +18,10 @@ advice, investment advice, or a representation of any real fund performance.
 
 ## How To Use The Pack
 
-Use the one-page overview before the meeting, the demo script during the
-meeting, and the feedback form immediately after the walkthrough. The outreach
-templates help you invite different reviewer types without overpromising what
-the alpha can do.
+Use the first-batch operations pack to decide who should review the beta, the
+one-page overview before the meeting, the demo script during the meeting, and
+the feedback form immediately after the walkthrough. The outreach templates help
+you invite different reviewer types without overpromising what the alpha can do.
 
 ## Positioning Boundary
 
