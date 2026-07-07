@@ -13,6 +13,8 @@ advice, investment advice, or a representation of any real fund performance.
 - [First Batch Private Beta Operations](./first-batch/README.md)
 - [Nontechnical Fund Manager Reviewer Pack](./nontechnical-fund-manager-reviewer-pack.md)
 - [非技術基金經理人試用邀請包](./nontechnical-fund-manager-reviewer-pack-zh.md)
+- [中文版 DOCX](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.docx)
+- [中文版 PDF](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [Sample Completed Report](./sample-completed-report.md)
 - [One-Page Overview](./one-page-overview.md)
 - [Demo Meeting Script](./demo-meeting-script.md)
