@@ -49,6 +49,7 @@ http://127.0.0.1:5174/admin/access-codes
 Core docs:
 
 - [中文試用 PDF - send this to nontechnical reviewers](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
+- [Nontechnical Fund Manager Onboarding Workflow](./docs/lp-facing/nontechnical-onboarding/README.md)
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [First Batch Private Beta Operations](./docs/lp-facing/first-batch/README.md)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
@@ -185,6 +186,7 @@ npm run business:smoke
 Public alpha documentation:
 
 - [中文試用 PDF - send this to nontechnical reviewers](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
+- [Nontechnical Fund Manager Onboarding Workflow](./docs/lp-facing/nontechnical-onboarding/README.md)
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [First Batch Private Beta Operations](./docs/lp-facing/first-batch/README.md)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)

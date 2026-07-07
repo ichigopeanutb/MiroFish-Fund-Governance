@@ -161,3 +161,31 @@ questions.
 - Generate a DOCX packet that can be sent directly to nontechnical reviewers.
 - Keep all screenshots and reports synthetic; do not add real LP data, real fund
   documents, investor identifiers, access codes, or confidential notes.
+
+## Roadmap Fit Check - Nontechnical Fund Manager Onboarding Workflow Alpha
+
+Status: completed
+
+After testing the LP-facing PDF approach, the next adoption bottleneck became
+clear: many Taiwan fund managers and GP-side reviewers will not have a technical
+operator who can clone a repo, configure access codes, or translate fund
+questions into simulation inputs.
+
+This milestone is aligned with the roadmap because it moves the product from
+repo-based trial toward a service-style workflow: a nontechnical reviewer gives
+a simplified scenario, an operator converts it into synthetic simulation input,
+and the reviewer receives a Chinese report / meeting pack.
+
+## Nontechnical Onboarding Decisions
+
+- Add `docs/lp-facing/nontechnical-onboarding/` as the second-step workflow
+  after the reviewer has seen the Chinese PDF.
+- Create a Chinese intake form focused on simplified, anonymized, or synthetic
+  inputs.
+- Create an operator checklist for converting intake answers into simulation
+  setup while preserving data boundaries.
+- Create a Chinese output report template shaped like a meeting pack, not an
+  engineering log.
+- Keep GitHub access out of the first nontechnical workflow.
+- Treat public repo access as optional later distribution, not the primary
+  adoption path for fund managers.

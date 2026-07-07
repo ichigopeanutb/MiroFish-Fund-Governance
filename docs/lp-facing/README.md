@@ -17,6 +17,14 @@ advice, investment advice, or a representation of any real fund performance.
 The DOCX has the same content as the PDF. Use the DOCX only when you need an
 editable backup.
 
+### If The Reviewer Is Interested
+
+- [Nontechnical Fund Manager Onboarding Workflow](./nontechnical-onboarding/README.md)
+
+Use this only after the reviewer wants to explore a real use case. It provides a
+Chinese intake form, operator checklist, and output report template so the
+reviewer does not need GitHub or technical setup.
+
 ### Internal Source / Operations
 
 - [First Batch Private Beta Operations](./first-batch/README.md)
