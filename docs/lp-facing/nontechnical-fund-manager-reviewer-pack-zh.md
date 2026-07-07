@@ -2,14 +2,13 @@
 
 這份文件是給不需要 GitHub、不需要技術背景的基金經理人、前輩、LP-facing reviewer 或顧問看的。所有內容都使用 synthetic demo，不包含真實 LP、基金文件、投資人身份、銀行資訊、稅務紀錄、法律意見、會計紀錄或投資建議。
 
-## 建議直接傳送版本
+## 對外發送版本
 
-如果要直接發給非技術 reviewer，請優先使用下列 DOCX 或 PDF，因為 demo 頁面截圖已經嵌入文件內：
+如果要直接發給非技術 reviewer，只發這一份：
 
-- [中文版 DOCX](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.docx)
 - [中文版 PDF](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 
-Markdown 版本主要作為 repo 內的 source note。如果你單獨下載這個 `.md` 檔而沒有一起下載 `assets/` folder，下面的截圖可能不會顯示。
+DOCX 和 PDF 是同一份內容。PDF 是對外發送版本；DOCX 只是日後需要修改文字時使用的 editable backup。Markdown 版本主要作為 repo 內的 source note。如果你單獨下載這個 `.md` 檔而沒有一起下載 `assets/` folder，下面的截圖可能不會顯示。
 
 ## 一句話說明
 

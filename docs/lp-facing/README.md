@@ -10,11 +10,19 @@ advice, investment advice, or a representation of any real fund performance.
 
 ## Pack Contents
 
+### Send To Nontechnical Reviewers
+
+- [中文版 PDF - direct send version](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
+
+The DOCX has the same content as the PDF. Use the DOCX only when you need an
+editable backup.
+
+### Internal Source / Operations
+
 - [First Batch Private Beta Operations](./first-batch/README.md)
 - [Nontechnical Fund Manager Reviewer Pack](./nontechnical-fund-manager-reviewer-pack.md)
 - [非技術基金經理人試用邀請包](./nontechnical-fund-manager-reviewer-pack-zh.md)
-- [中文版 DOCX](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.docx)
-- [中文版 PDF](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
+- [中文版 DOCX - editable backup](./MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.docx)
 - [Sample Completed Report](./sample-completed-report.md)
 - [One-Page Overview](./one-page-overview.md)
 - [Demo Meeting Script](./demo-meeting-script.md)
@@ -23,10 +31,10 @@ advice, investment advice, or a representation of any real fund performance.
 
 ## How To Use The Pack
 
-Use the first-batch operations pack to decide who should review the beta, the
-one-page overview before the meeting, the demo script during the meeting, and
-the feedback form immediately after the walkthrough. The outreach templates help
-you invite different reviewer types without overpromising what the alpha can do.
+For a first nontechnical fund-manager reviewer, send only the Chinese PDF and a
+short message asking for three reactions. Use the first-batch operations pack to
+track who you invited, the demo script only when you schedule a walkthrough, and
+the feedback form after the reviewer has responded.
 
 ## Positioning Boundary
 

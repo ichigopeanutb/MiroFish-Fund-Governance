@@ -48,11 +48,9 @@ http://127.0.0.1:5174/admin/access-codes
 
 Core docs:
 
+- [中文試用 PDF - send this to nontechnical reviewers](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [First Batch Private Beta Operations](./docs/lp-facing/first-batch/README.md)
-- [Nontechnical Fund Manager Reviewer Pack](./docs/lp-facing/nontechnical-fund-manager-reviewer-pack.md)
-- [非技術基金經理人試用邀請包](./docs/lp-facing/nontechnical-fund-manager-reviewer-pack-zh.md)
-- [中文版 PDF](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
 - [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
 - [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)
@@ -186,11 +184,9 @@ npm run business:smoke
 
 Public alpha documentation:
 
+- [中文試用 PDF - send this to nontechnical reviewers](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
 - [First Batch Private Beta Operations](./docs/lp-facing/first-batch/README.md)
-- [Nontechnical Fund Manager Reviewer Pack](./docs/lp-facing/nontechnical-fund-manager-reviewer-pack.md)
-- [非技術基金經理人試用邀請包](./docs/lp-facing/nontechnical-fund-manager-reviewer-pack-zh.md)
-- [中文版 PDF](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [Business Governance Public Alpha](./docs/business-governance-public-alpha.md)
 - [Business Governance Alpha Runbook](./docs/business-governance-alpha-runbook.md)
 - [Fund Governance Implementation Notes](./docs/fund-governance-implementation-notes.md)
