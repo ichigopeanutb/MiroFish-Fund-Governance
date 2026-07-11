@@ -53,6 +53,7 @@ mytest/
 backend/logs/
 *.log
 .mirofish_runtime/
+.formal_harness/runs/
 private/
 frontend/public/results/
 

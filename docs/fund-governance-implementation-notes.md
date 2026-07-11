@@ -3,6 +3,33 @@
 This file tracks product-boundary decisions for the fund-governance edition.
 It is a working implementation log, not a fund ledger and not an approval record.
 
+## Roadmap Fit Check - Formal Phase 0 Harness Bootstrap
+
+Status: completed
+
+Before formal-version characterization or refactoring, the repository now has a
+project-specific harness based on first principles and the harness-engineering
+idea that workflow, context, artifacts, permissions, evaluation, failure memory,
+and human gates must surround the coding loop.
+
+The harness defines the north-star outcome, protected evaluator surfaces,
+product invariants, Phase 0 workstreams, fixed evaluation command, persistent
+results, human gates, stop conditions, and the exit gate for tagging the MVP and
+creating the formal-v1 branch.
+
+Bootstrap baseline:
+
+- command: `bash scripts/formal_eval.sh`
+- status: `pass`
+- score: `100`
+- checks: `4 passed`, `0 failed`
+- covered: git diff integrity, backend business tests, public-alpha smoke, and
+  frontend production build
+
+This baseline proves that the current MVP remains runnable under the fixed
+harness. It does not prove financial, legal, accounting, security, replay, or
+production correctness. Those remain Phase 0 characterization work.
+
 ## Roadmap Fit Check - Formal Edition Pre-Research
 
 Status: research completed; implementation not started

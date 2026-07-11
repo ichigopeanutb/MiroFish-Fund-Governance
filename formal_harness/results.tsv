@@ -1,0 +1,2 @@
+timestamp	commit	status	score	checks_passed	checks_failed	runtime_seconds	milestone	hypothesis	result	run_dir
+2026-07-11T15:18:57Z	working-tree@1e645d1	pass	100	4	0	6	phase0-harness-bootstrap	The fixed local evaluator can verify the current MVP without changing tracked runtime outputs	All four baseline checks passed; financial correctness and replay remain unverified	.formal_harness/runs/20260711T151857Z
