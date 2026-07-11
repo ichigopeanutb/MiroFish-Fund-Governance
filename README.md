@@ -48,6 +48,7 @@ http://127.0.0.1:5174/admin/access-codes
 
 Core docs:
 
+- [正式版前置研究與就緒計畫（中文）](./docs/formal-edition-benchmark-and-readiness-plan-zh.md)
 - [中文試用 PDF - send this to nontechnical reviewers](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [Nontechnical Fund Manager Onboarding Workflow](./docs/lp-facing/nontechnical-onboarding/README.md)
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)
@@ -185,6 +186,7 @@ npm run business:smoke
 
 Public alpha documentation:
 
+- [正式版前置研究與就緒計畫（中文）](./docs/formal-edition-benchmark-and-readiness-plan-zh.md)
 - [中文試用 PDF - send this to nontechnical reviewers](./docs/lp-facing/MiroFish_Fund_Governance_Nontechnical_Reviewer_Pack_ZH.pdf)
 - [Nontechnical Fund Manager Onboarding Workflow](./docs/lp-facing/nontechnical-onboarding/README.md)
 - [LP-Facing Material Pack](./docs/lp-facing/README.md)

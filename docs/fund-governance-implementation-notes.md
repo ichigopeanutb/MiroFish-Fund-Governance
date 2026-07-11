@@ -3,6 +3,27 @@
 This file tracks product-boundary decisions for the fund-governance edition.
 It is a working implementation log, not a fund ledger and not an approval record.
 
+## Roadmap Fit Check - Formal Edition Pre-Research
+
+Status: research completed; implementation not started
+
+The alpha roadmap proved the MiroFish-native fund-governance concept, a complete
+synthetic workflow, governance review, LP-facing materials, and nontechnical
+onboarding. The next step should not be another alpha feature or a copied MVP
+folder. The product is moving toward real LP conversations, capital-readiness
+planning, and more complete fund operations, so the formal edition must first
+establish durable financial, governance, data, and versioning boundaries.
+
+The benchmark and readiness decision is recorded in
+`docs/formal-edition-benchmark-and-readiness-plan-zh.md`. It positions this
+edition as a system of rehearsal that integrates with, rather than pretends to
+replace, fund administration, accounting, banking, KYC / AML, and legal systems.
+
+The next proposed milestone is `Formal Phase 0 - Freeze and Characterize`.
+Before creating the MVP tag or formal-v1 branch, Phase 0 must characterize the
+current contracts and outputs, add golden and replay checks, document data and
+security boundaries, and prove that the branch point is reproducible.
+
 ## Roadmap Fit Check - Private Beta Access Management Alpha
 
 Status: completed
